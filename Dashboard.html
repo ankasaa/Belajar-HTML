@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Dashboard Admin</title>
+</head>
+<body>
+    <!-- app-container membungkus SEMUA isi web -->
+    <div class="app-container">
+        
+        <header>
+            <div class="top-navbar">
+                <h1>Dashboard Sistem Informasi Akademik</h1>
+                <img src="https://media.istockphoto.com/id/1311957094/id/foto/tampan-tersenyum-pemuda-dengan-potret-lengan-menyilang.jpg?s=612x612&w=0&k=20&c=dMeBsixl6X2UfLjABGH5by3euuNHEqgt1M1babFEJBs=" alt="Avatar Admin" height="50" width="50">
+            </div>
+        </header>
+
+        <!-- dashboard-layout membungkus Sidebar dan Main Content agar nanti bisa dijejer ke samping pakai CSS -->
+        <div class="dashboard-layout">
+            
+            <aside class="side-bar">
+                <nav>
+                    <ul>
+                        <li>Dashboard</li>
+                        <li>Data Mahasiswa</li>
+                        <li>Pengaturan</li>
+                        <li>Logout</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <h2>Selamat Datang, Admin Andika!</h2>
+
+                <section class="data-section">
+                    <h3>Data Mahasiswa Aktif</h3>
+                    <table style="border: 1px solid black; border-collapse: collapse;">
+                        <!-- thead ada di DALAM table -->
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid black;">NIM</th>
+                                <th style="border: 1px solid black;">Nama Lengkap</th>
+                                <th style="border: 1px solid black;">Program Studi</th>
+                                <th style="border: 1px solid black;">Status</th>
+                            </tr>
+                        </thead>
+                        <!-- tbody ada di DALAM table -->
+                        <tbody>
+                            <tr>
+                                <td style="border: 1px solid black;">26001</td>
+                                <td style="border: 1px solid black;">Budi Santoso</td>
+                                <td style="border: 1px solid black;">Informatika</td>
+                                <td style="border: 1px solid black;">Aktif</td>
+                            </tr>
+                            <tr>
+                                <td style="border: 1px solid black;">26002</td>
+                                <td style="border: 1px solid black;">Siti Aminah</td>
+                                <td style="border: 1px solid black;">Sistem Informasi</td>
+                                <td style="border: 1px solid black;">Cuti</td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </section>
+                <br>
+
+                <section class="form-section">
+                    <h3>Tambah Data Mahasiswa Baru</h3>
+                    <!-- Selalu ingat pakai tag form! -->
+                    <form action="#">
+                        <fieldset>
+                            <legend>Form Registrasi</legend>
+                            
+                            <label for="nim">NIM :</label>
+                            <input type="number" name="nim" id="nim"><br><br>
+                            
+                            <label for="name">Nama :</label>
+                            <input type="text" name="name" id="name"><br><br>
+                            
+                            <label for="program_studi">Program Studi:</label>
+                            <select name="program_studi" id="program_studi">
+                                <option value="Informatika">Informatika</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Bisnis Digital">Bisnis Digital</option>
+                            </select><br><br>
+                            
+                            <strong>Jalur Masuk:</strong><br>
+                            <!-- Name disamakan agar hanya bisa pilih salah satu -->
+                            <input type="radio" name="jalur_masuk" id="reguler" value="Reguler">
+                            <label for="reguler">Reguler</label>
+                            
+                            <input type="radio" name="jalur_masuk" id="beasiswa" value="Beasiswa">
+                            <label for="beasiswa">Beasiswa</label><br><br>
+                            
+                            <strong>Dokumen Lengkap:</strong><br>
+                            <input type="checkbox" name="dokumen_ijazah" id="ijazah" value="Ijazah">
+                            <label for="ijazah">Ijazah</label>
+                            
+                            <input type="checkbox" name="dokumen_ktp" id="ktp" value="KTP">
+                            <label for="ktp">KTP</label><br><br>
+                            
+                            <input type="submit" value="Simpan Data">
+                        </fieldset>
+                    </form>
+                </section>
+
+            </main>
+        </div> <!-- Penutup dashboard-layout -->
+
+        <footer>Hak Cipta &copy; 2026 - Panel Admin | Latihan Web Development</footer>
+    </div> <!-- Penutup app-container -->
+</body>
+</html>
