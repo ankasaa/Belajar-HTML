@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan5</title>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="top-navbar">
+                <h1>Dashboard Sistem Informasi Akademik</h1>
+                <img src="https://media.istockphoto.com/id/1311957094/id/foto/tampan-tersenyum-pemuda-dengan-potret-lengan-menyilang.jpg?s=612x612&w=0&k=20&c=dMeBsixl6X2UfLjABGH5by3euuNHEqgt1M1babFEJBs=" alt="dewa" height="50" width="50">
+            </div>
+            <div class="dashboard-layout">
+                <aside class="side-bar">
+                    <nav>
+                        <ul>
+                            <li>Dashboard</li>
+                            <li>Data Mahasiswa</li>
+                            <li>Pengaturan</li>
+                            <li>Logout</li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </header>
+    </div>
+    <main class="main-content">
+        <section class="data-section">
+            <h1>Selamat Datang, Admin Andika!</h1>
+            <thead>Data Mahasiswa Aktif
+                <section class="form-section">
+                    <tbody > 
+                        <table style="border: 1px solid black;">
+                            <tr>
+                                <th style="border: 1px solid yellow;" >NIM</th>
+                                <th>Nama Lengkap</th>
+                                <th>Program Studi</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>26001</td>
+                                <td>Budi Santoso</td>
+                                <td>Informatika</td>
+                                <td>Aktif</td>
+                            </tr>
+                            <tr>
+                                <td>26001</td>
+                                <td>Siti Aminah</td>
+                                <td>Sistem Informasi</td>
+                                <td>Cuti</td>
+                            </tr>   
+                        </table>
+                    </tbody>
+                </section>
+            </thead>
+        </section>
+        <section>
+            <h1>Tambah Data Mahasiswa Baru</h1>
+            <fieldset>
+                <legend>Form register</legend>
+                <label for="nim">NIM :</label>
+                <input type="number" name="nim" id="nim"><br><br>
+                <label for="name">Nama :</label>
+                <input type="name" name="name" id="name"> <br> <br>
+                <select name="Program_studi" id="Program_studi">
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Bisnis Digital">Bisnis Digital</option>
+                </select>
+                <br><br>
+                <h3>Jalur masuk</h3>
+                <label for="">Reguler</label>
+                <input type="radio" name="Reguler" id="Reguler">
+                <label for="">Beasiswa</label>
+                <input type="radio" name="Beasiswa" id="Beasiswa">
+                <h3>Dokumen Lengkap</h3>
+                <label for="Ijazah">Ijazah</label>
+                <input type="checkbox" name="Ijazah" id="Ijazah">
+                <label for="KTP">KTP</label>
+                <input type="checkbox" name="KTP" id="KTP"><br><br>
+                <input type="button" value="Simpan Data">
+            </fieldset>
+        </section>
+    </main>
+    <footer>Hak Cipta © 2026 - Panel Admin | Latihan Web Development</footer>
+</body>
+</html>
