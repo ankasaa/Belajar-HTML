@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan6</title>
+    <style>
+        th, td{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Andika Tech Store</h3>
+        <nav>
+            <ul>
+                <li><a href="#"></a>Beranda</li>
+                <li><a href="#"></a>Kategori</li>
+                <li><a href="#"></a>Promo</li>
+                <li><a href="#"></a>Keranjang</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="product-overview">
+            <h2>Laptop Lenovo V14 G2 - Intel Core i3</h2>
+            <p>Harga: <strong>Rp 6.500.000</strong></p>
+            <div class="product-description">
+                <img src="https://laptopmedia.com/wp-content/uploads/2020/03/lenovov14featured.jpg" alt="Laptop-Lenovo-V14" width="250" height="150">
+                <h3>Deskripsi :</h3>
+                <p>Laptop handal untuk kebutuhan web development dan komputasi harian. Cocok untuk mahasiswa Informatika yang sering melakukan coding menggunakan VS Code dan menjalankan server lokal.</p>
+                <h3>Fitur Utama:</h3>
+                <ul>
+                    <li>Performa cepat dengan NVMe SSD</li>
+                    <li>Desain ringkas dan ringan</li>
+                    <li>Layar anti-silau (anti-glare)</li>
+                </ul>
+                <form action="">
+                    <fieldset>
+                        <h3>Beli Produk Ini:</h3>
+                        <label for="angka">Jumlah :</label>
+                        <input type="number" id="angka" min="1" max="1"><br><br>
+                        <label for="Varian">Varian Warna:</label>
+                        <select name="Varian" id="Varian">
+                            <option value="Iron Grey">Iron Grey</option>
+                            <option value="Abyss Blue">Abyss Blue</option>
+                            <option value="Black">Black</option>
+                        </select><br><br>
+                        <input type="button" value="Tambahkan ke Keranjang">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <section class="product-specs">
+            <h3>Spesifikasi Lengkap</h3>
+            <table style="border-collapse: collapse; width: 15%;">
+                <thead style="background-color: aqua;">
+                    <tr>
+                        <th>Komponen</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody style="background-color: pink;">
+                    <tr>
+                        <td>Prosesor</td>
+                        <td>Intel Core i3 11th Gen</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>12 GB DDR4</td>
+                    </tr>
+                    <tr>
+                        <td>Penyimpanan</td>
+                        <td>512 GB SSD NVMe</td>
+                    </tr>
+                </tbody>
+                <tfoot style="background-color: yellowgreen;">
+                    <tr>
+                        <td>Sistem Operasi</td>
+                        <td>Windows 11</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section class="product-reviews">
+            <h3>Ulasan Pembeli</h3>
+            <blockquote>
+                "Mantap! Dipakai untuk buka banyak tab W3Schools dan koding di VS Code sangat lancar." - Budi
+"Pengiriman cepat, packing aman. Sangat direkomendasikan!" - Siti
+            </blockquote>
+        </section>
+    </main>
+    <footer>Hak Cipta © 2026 - Andika Tech Store | Simulasi HTML</footer>
+</body>
+</html>
