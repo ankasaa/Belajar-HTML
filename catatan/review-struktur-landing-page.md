@@ -174,3 +174,64 @@ Berikut daftar bug yang ditemukan dan sudah diperbaiki selama proses review:
 ## Kode HTML Final
 
 > *Tempelkan versi final `porto.html` Anda di sini setelah semua perbaikan selesai.*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portofolio-andika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio-andika</title>
+</head>
+<body>
+    <header>
+        <p>Portofolio Andika</p>
+        <nav>
+            <ul>
+                <li><a href="#Beranda">Beranda</a></li>
+                <li><a href="#Keahlian">Keahlian</a></li>
+                <li><a href="#Proyek">Proyek</a></li>
+                <li><a href="#Kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Halo, Saya Andika</h1>
+                <p>Saya seorang Mahasiswa Informatika yang antusias membangun aplikasi web modern yang cepat dan dinamis.</p>
+            </div>
+            <img src="https://png.pngtree.com/png-clipart/20240709/original/pngtree-casual-man-flat-design-avatar-profile-picture-vector-png-image_15526568.png" alt="profile-saya" width="100" height="100">
+            <a href="#" class="btn">Lihat proyek</a>
+        </section>
+        <section class="skill-section">
+            <h2>Keahlian Utama</h2>
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <p>Membangun antarmuka interaktif menggunakan <br> HTML, CSS, dan dasar JavaScript.</p>
+            </div>
+            <div class="skill-card">
+                <h3>UI/UX Design </h3>
+                <p>Merancang wireframe dan desain visual yang ramah pengguna.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Eksplorasi AI </h3>
+                <p>Memahami pemanfaatan AI terbaru untuk menunjang produktivitas coding.</p>
+            </div>
+        </section>
+        <section class="contact-section">
+            <h2>Mari Berkolaborasi!</h2>
+            <p>Tinggalkan pesan dan saya akan segera membalasnya.</p>
+            <form action="#" method="post">
+                <label for="name">Nama : </label>
+                <input type="text" id="name" name="name" required> <br> <br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required> <br> <br>
+                <label for="pesan">pesan :</label> 
+                <textarea name="Pesan" id="pesan" required></textarea> <br> <br>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+    <footer>Hak Cipta © 2026 - Portofolio Web Developer</footer>
+</body>
+</html>
