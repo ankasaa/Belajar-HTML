@@ -9,7 +9,23 @@ Terdapat tiga bagian utama: navigasi di atas, konten artikel utama di tengah, da
 ---
 
 ## Review Kesalahan & Pelajaran Penting
+Bertindaklah sebagai mentor Web Development. Saya baru saja menyelesaikan latihan menyusun "Struktur Halaman Blog Teknologi (Artikel & Sidebar)" menggunakan HTML Semantic. Tolong buatkan saya dokumen catatan belajar dalam format Markdown (.md) berdasarkan kode akhir saya.
 
+Tolong susun file .md tersebut dengan kerangka berikut:
+
+Deskripsi Proyek: Penjelasan singkat tentang apa yang dibuat oleh kode HTML ini (fokus pada penggunaan HTML5 Semantic Tags untuk layout dasar web).
+
+Review Kesalahan & Pelajaran Penting: Tolong buatkan bagian khusus yang menyoroti dua hal yang sempat terlewat saat saya menyusun kode ini, agar saya bisa mengingatnya:
+
+Posisi Elemen <footer>: Awalnya saya menaruh <footer> di dalam tag <main>. Jelaskan mengapa secara hierarki standar web, <footer> sebaiknya diletakkan sejajar dengan <header> dan <main> (langsung di dalam <body>).
+
+Teks Formatting yang Terlupa: Saya lupa menggunakan tag <strong> pada bagian tanggal publikasi dan nama penulis. Ingatkan saya pentingnya tag ini untuk penekanan teks.
+
+Bedah Kode & Fungsi Semantic (Baris per Baris): Jelaskan fungsi dari tag-tag semantik yang ada di kode saya dan mengapa mereka penting untuk SEO atau screen reader. Tolong bedah tag ini: <header>, <nav>, <main>, <article>, <aside>, dan <blockquote>.
+
+Gunakan bahasa Indonesia yang santai, terstruktur rapi, dan mudah dipahami.
+
+Berikut adalah kode HTML final saya yang sudah diperbaiki:
 ### 1. Posisi Elemen `<footer>` yang Salah
 
 **Yang terjadi:**

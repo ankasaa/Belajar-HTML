@@ -9,11 +9,12 @@ Kode HTML ini membangun halaman **Dashboard Admin** untuk sistem informasi akade
 - **Formulir Tingkat Lanjut**: Penggunaan `<fieldset>` dan `<legend>` untuk mengelompokkan input, serta radio button dan checkbox untuk input interaktif.
 
 ### [Screenshot Hasil Akhir]
+
 > _Sisipkan gambar tangkapan layar (screenshot) hasil render halaman ini di browser di sini. Programmer sangat visual — melihat layout akan langsung memancing ingatan tentang bagaimana struktur HTML-nya dibangun._
 
-```
+````
 [ Placeholder: Screenshot Dashboard Admin di browser ]
-```
+```C:\Users\oktaa\Desktop\Belajar-HTML\catatan\Catatan-Belajar-Dashboard-Admin.md
 
 ---
 
@@ -41,27 +42,28 @@ Dalam HTML, `<thead>` dan `<tbody>` adalah **anak langsung** dari `<table>`. Mer
         </tbody>
     </section>
 </thead>
-```
+````
 
 ```html
 <!-- ✔️ BENAR: thead dan tbody adalah anak dari table -->
 <table>
-    <thead>
-        <tr>
-            <th>NIM</th>
-            <th>Nama</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>26001</td>
-            <td>Budi</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>NIM</th>
+      <th>Nama</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>26001</td>
+      <td>Budi</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 **Aturan emas:**
+
 ```
 <table>
   ├── <thead>   (hanya berisi baris judul <tr> + <th>)
@@ -76,6 +78,7 @@ Dalam HTML, `<thead>` dan `<tbody>` adalah **anak langsung** dari `<table>`. Mer
 
 **Yang terjadi:**
 Awalnya saya memberikan atribut `name` yang **berbeda** pada setiap radio button:
+
 - Radio "Reguler" → `name="Reguler"`
 - Radio "Beasiswa" → `name="Beasiswa"`
 
@@ -86,16 +89,16 @@ Radio button bekerja dengan prinsip **satu grup, satu pilihan**. Grup ditentukan
 
 ```html
 <!-- ❌ SALAH: name berbeda, bisa pilih keduanya sekaligus -->
-<input type="radio" name="Reguler" id="reguler">
-<input type="radio" name="Beasiswa" id="beasiswa">
+<input type="radio" name="Reguler" id="reguler" />
+<input type="radio" name="Beasiswa" id="beasiswa" />
 ```
 
 ```html
 <!-- ✔️ BENAR: name sama, hanya bisa pilih salah satu -->
-<input type="radio" name="jalur_masuk" id="reguler" value="Reguler">
+<input type="radio" name="jalur_masuk" id="reguler" value="Reguler" />
 <label for="reguler">Reguler</label>
 
-<input type="radio" name="jalur_masuk" id="beasiswa" value="Beasiswa">
+<input type="radio" name="jalur_masuk" id="beasiswa" value="Beasiswa" />
 <label for="beasiswa">Beasiswa</label>
 ```
 
@@ -125,22 +128,22 @@ Tag `<form>` adalah **wadah** yang memberitahu browser bahwa semua input di dala
 ```html
 <!-- ❌ SALAH: Input tanpa pembungkus form -->
 <section>
-    <fieldset>
-        <legend>Form Registrasi</legend>
-        <input type="number" name="nim">
-        <input type="submit" value="Simpan">
-    </fieldset>
+  <fieldset>
+    <legend>Form Registrasi</legend>
+    <input type="number" name="nim" />
+    <input type="submit" value="Simpan" />
+  </fieldset>
 </section>
 ```
 
 ```html
 <!-- ✔️ BENAR: Semua input dibungkus dengan form -->
 <form action="#" method="POST">
-    <fieldset>
-        <legend>Form Registrasi</legend>
-        <input type="number" name="nim">
-        <input type="submit" value="Simpan">
-    </fieldset>
+  <fieldset>
+    <legend>Form Registrasi</legend>
+    <input type="number" name="nim" />
+    <input type="submit" value="Simpan" />
+  </fieldset>
 </form>
 ```
 
@@ -159,25 +162,30 @@ Ketika nanti kita styling dengan CSS Flexbox atau Grid, parent container `<div c
 ```html
 <!-- ❌ SALAH: app-container ditutup sebelum main & footer -->
 <div class="app-container">
-    <header>...</header>
-    <div class="dashboard-layout">
-        <aside>...</aside>
-    </div>
-</div>  <!-- ← ditutup terlalu cepat! -->
-<main class="main-content">...</main>  <!-- keluar dari layout -->
-<footer>...</footer>  <!-- keluar dari layout -->
+  <header>...</header>
+  <div class="dashboard-layout">
+    <aside>...</aside>
+  </div>
+</div>
+<!-- ← ditutup terlalu cepat! -->
+<main class="main-content">...</main>
+<!-- keluar dari layout -->
+<footer>...</footer>
+<!-- keluar dari layout -->
 ```
 
 ```html
 <!-- ✔️ BENAR: Semua elemen di dalam app-container -->
 <div class="app-container">
-    <header>...</header>
-    <div class="dashboard-layout">
-        <aside>...</aside>
-        <main class="main-content">...</main>
-    </div>  <!-- penutup dashboard-layout -->
-    <footer>...</footer>
-</div>  <!-- penutup app-container, TUTUP DI SINI -->
+  <header>...</header>
+  <div class="dashboard-layout">
+    <aside>...</aside>
+    <main class="main-content">...</main>
+  </div>
+  <!-- penutup dashboard-layout -->
+  <footer>...</footer>
+</div>
+<!-- penutup app-container, TUTUP DI SINI -->
 ```
 
 **Tips:** Saat menulis HTML bersarang, **selalu komentari** setiap tag penutup:
@@ -192,15 +200,18 @@ Ketika nanti kita styling dengan CSS Flexbox atau Grid, parent container `<div c
 ## Bedah Kode: Fungsi Tag Lanjutan
 
 ### `<fieldset>`
+
 ```html
 <fieldset>
-    <legend>Form Registrasi</legend>
-    <!-- input-input di sini -->
+  <legend>Form Registrasi</legend>
+  <!-- input-input di sini -->
 </fieldset>
 ```
+
 **Fungsi:** Membungkus sekelompok input yang **saling berkaitan** secara visual dan semantik. Browser biasanya menampilkannya dengan border di sekeliling grup input.
 
 **Penting untuk:**
+
 - **Aksesibilitas**: Screen reader mengenali ini sebagai satu grup input
 - **SEO**: Mesin pemaham struktur form
 - **Visual**: Memudahkan pengguna memahami pengelompokan form
@@ -208,29 +219,35 @@ Ketika nanti kita styling dengan CSS Flexbox atau Grid, parent container `<div c
 ---
 
 ### `<legend>`
+
 ```html
 <legend>Form Registrasi</legend>
 ```
+
 **Fungsi:** Memberikan **judul** atau label pada `<fieldset>`. Biasanya muncul di tepi border fieldset.
 
 **Penting untuk:**
+
 - **Screen reader**: Membacakan judul grup sebelum masuk ke input
 - **Konteks**: Pengguna langsung tahu grup input ini untuk apa
 
 ---
 
 ### `<thead>`
+
 ```html
 <thead>
-    <tr>
-        <th>NIM</th>
-        <th>Nama</th>
-    </tr>
+  <tr>
+    <th>NIM</th>
+    <th>Nama</th>
+  </tr>
 </thead>
 ```
+
 **Fungsi:** Membungkus baris **judul kolom** dari tabel.
 
 **Penting untuk:**
+
 - **SEO**: Google mengenali ini sebagai header tabel
 - **Screen reader**: Saat navigasi tabel, pengguna langsung tahu kolom apa saja yang ada
 - **CSS**: Bisa distyling terpisah dari data (misal: background berbeda)
@@ -238,17 +255,20 @@ Ketika nanti kita styling dengan CSS Flexbox atau Grid, parent container `<div c
 ---
 
 ### `<tbody>`
+
 ```html
 <tbody>
-    <tr>
-        <td>26001</td>
-        <td>Budi Santoso</td>
-    </tr>
+  <tr>
+    <td>26001</td>
+    <td>Budi Santoso</td>
+  </tr>
 </tbody>
 ```
+
 **Fungsi:** Membungkus baris **isi data** dari tabel.
 
 **Penting untuk:**
+
 - **Struktur**: Memisahkan data dari header secara jelas
 - **JavaScript**: Bisa diakses terpisah untuk manipulasi data
 - **CSS**: Bisa distyling terpisah (zebra stripe, hover, dll)
@@ -266,20 +286,26 @@ Ketika nanti kita styling dengan CSS Flexbox atau Grid, parent container `<div c
 Pembungkusan elemen dengan `<div class="dashboard-layout">` bukan tanpa alasan. Ini adalah **persiapan krusial** untuk langkah selanjutnya: **CSS Flexbox dan CSS Grid**.
 
 Dengan struktur yang sudah benar:
+
 ```html
 <div class="dashboard-layout">
-    <aside class="side-bar">...</aside>
-    <main class="main-content">...</main>
+  <aside class="side-bar">...</aside>
+  <main class="main-content">...</main>
 </div>
 ```
 
 Kita bisa dengan mudah membuat sidebar dan konten utama **berdampingan** menggunakan:
+
 ```css
 .dashboard-layout {
-    display: flex;        /* atau display: grid; */
+  display: flex; /* atau display: grid; */
 }
-.side-bar { width: 250px; }
-.main-content { flex: 1; }
+.side-bar {
+  width: 250px;
+}
+.main-content {
+  flex: 1;
+}
 ```
 
 **Catatan untuk diri sendiri:** Susun HTML dengan benar terlebih dahulu, barulah CSS akan bekerja dengan mudah. HTML yang berantakan = CSS yang rumit.
