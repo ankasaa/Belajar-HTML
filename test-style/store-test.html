@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan6</title>
+    <style>
+        /* Gaya dasar seluruh halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray; /* Warna background abu-abu terang */
+            margin: 20px;
+        }
+
+        /* Gaya untuk Header */
+        header {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Gaya untuk Navigasi (Menu) */
+        nav ul {
+            list-style-type: none; /* Menghilangkan titik (bullet) */
+            padding: 0;
+        }
+        nav ul li {
+            display: inline; /* Membuat menu berjejer ke samping */
+            margin-right: 15px;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        /* Gaya untuk Konten Utama */
+        main {
+            background-color: white;
+            padding: 20px;
+            border: 2px solid black; /* Garis pinggir hitam */
+            margin-top: 10px;
+        }
+
+        /* Gaya untuk Form / Fieldset */
+        fieldset {
+            background-color: lightyellow;
+            border: 2px dashed orange; /* Garis putus-putus */
+            width: 50%;
+        }
+
+        /* Gaya untuk Tabel */
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: lightblue;
+        }
+
+        /* Gaya untuk Ulasan */
+        blockquote {
+            background-color: lightgreen;
+            padding: 10px;
+            border-left: 5px solid green;
+            font-style: italic;
+        }
+
+        /* Gaya untuk Footer */
+        footer {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Andika Tech Store</h2>
+        <nav>
+            <ul>
+                <li>Beranda</li>
+                <li>Kategori</li>
+                <li>Promo</li>
+                <li>Keranjang</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product-overview">
+            <h2>Laptop Lenovo V14 G2 - Intel Core i3</h2>
+            <p>Harga: <strong>Rp 6.500.000</strong></p>
+            
+            <div class="product-description">
+                <img src="https://laptopmedia.com/wp-content/uploads/2020/03/lenovov14featured.jpg" alt="Laptop-Lenovo-V14" width="250" height="150">
+                
+                <h3>Deskripsi :</h3>
+                <p>Laptop handal untuk kebutuhan web development dan komputasi harian. Cocok untuk mahasiswa Informatika yang sering melakukan coding menggunakan VS Code dan menjalankan server lokal.</p>
+                
+                <h3>Fitur Utama:</h3>
+                <ul>
+                    <li>Performa cepat dengan NVMe SSD</li>
+                    <li>Desain ringkas dan ringan</li>
+                    <li>Layar anti-silau (anti-glare)</li>
+                </ul>
+                
+                <form action="">
+                    <fieldset>
+                        <h3>Beli Produk Ini:</h3>
+                        <label for="angka">Jumlah :</label>
+                        <!-- Mengganti type="angka" menjadi type="number" agar ada panah naik turun -->
+                        <input type="number" id="angka" min="1" value="1"><br><br>
+                        
+                        <label for="Varian">Varian Warna:</label>
+                        <select name="Varian" id="Varian">
+                            <option value="Iron Grey">Iron Grey</option>
+                            <option value="Abyss Blue">Abyss Blue</option>
+                            <option value="Black">Black</option>
+                        </select><br><br>
+                        
+                        <input type="button" value="Tambahkan ke Keranjang">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <section class="product-specs">
+            <h3>Spesifikasi Lengkap</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Komponen</th>
+                        <th>Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prosesor</td>
+                        <td>Intel Core i3 11th Gen</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>12 GB DDR4</td>
+                    </tr>
+                    <tr>
+                        <td>Penyimpanan</td>
+                        <td>512 GB SSD NVMe</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Sistem Operasi</td>
+                        <td>Windows 11</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section class="product-reviews">
+            <h3>Ulasan Pembeli</h3>
+            <blockquote>
+                "Mantap! Dipakai untuk buka banyak tab W3Schools dan koding di VS Code sangat lancar." - Budi <br><br>
+                "Pengiriman cepat, packing aman. Sangat direkomendasikan!" - Siti
+            </blockquote>
+        </section>
+    </main>
+
+    <footer>Hak Cipta © 2026 - Andika Tech Store | Simulasi HTML</footer>
+</body>
+</html>
